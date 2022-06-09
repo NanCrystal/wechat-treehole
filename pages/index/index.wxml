@@ -1,0 +1,26 @@
+<!-- pages/welcome.wxml -->
+<view class="welcome-page">
+  <view class="welcome-container">
+
+    <image class="swiper-item" src="../../assets/images/bgc_16.png" mode="aspectFit" />
+    <!-- <swiper bindchange="handleChange" class="welcome-swiper" easing-function="{{easing}}" circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="*this">
+                <swiper-item>
+                    <image class="swiper-item" src="{{item}}" mode="aspectFill"/>
+                </swiper-item>
+            </block>
+        </swiper> -->
+  </view>
+  <!-- <view class="welcome-pass" bindtap="onPass">
+    跳过
+  </view> -->
+  <view class="welcome-text">
+    <view class="desc-item">记录生活，点滴快乐</view>
+    <!-- <view class="desc-item">记</view>
+    <view class="desc-item">录</view>
+    <view class="desc-item">美</view>
+    <view class="desc-item">好</view>
+    <view class="desc-item">生</view>
+    <view class="desc-item">活</view>  -->
+  </view>
+</view>

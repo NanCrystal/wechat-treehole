@@ -1,0 +1,36 @@
+<!--pages/addPage.wxml-->
+<view class="add-page-container">
+  <form class="form-container" bindsubmit="formSubmit" bindreset="formCancel">
+    <picker mode="date" name="selectDate" value="{{selectDate}}" bindchange="bindDateChange">
+      <view class="date-picker">
+        <view class="date-picker-text">
+          <text class="date-title">日期：</text>
+          <text class="date-text">{{selectDate}}</text>
+        </view>
+        <view class="date-icon">
+          <image class="date-image" src="../../assets/images/date.png" mode="aspectFit" />
+        </view>
+      </view>
+    </picker>
+    <view class="input-section">
+      <text class="input-text">主题：</text>
+      <input name="title" value="{{title}}" class="input-context" />
+
+    </view>
+    <!-- <view class="input-section">
+      <text class="input-text">背景：</text>
+      <image class="input-bgc"  name="bgc" src="{{bgc}}" mode="aspectFill" />
+    </view> -->
+    <view class="textarea-section">
+      <text class="textarea-text">事情：</text>
+      <textarea class="textarea-context" 	cursor-spacing="120" 	disable-default-padding="true" maxlength="-1" value="{{content}}" confirm-type="return" name="content" auto-height />
+    </view>
+    <view class="btn-container">
+
+      <button wx:if="{{!!isEdit}}" class="btn-cancel" catch:tap="deleteItem">删 除</button>
+      <button wx:else class="btn-cancel" formType="reset">取 消</button>
+      <button class="btn-submit" formType="submit">保 存</button>
+
+    </view>
+  </form>
+</view>

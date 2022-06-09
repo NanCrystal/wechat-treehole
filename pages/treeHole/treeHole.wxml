@@ -1,0 +1,39 @@
+<!-- index.wxml -->
+<view class="treeHole-container">
+  <block>
+    <!-- <view class="treeHole-position">
+</view> -->
+  </block>
+  <block wx:if="{{list.length}}">
+    <view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index" class="treeHole-item" data-item="{{item}}" catch:tap="tapItem">
+      <block>
+        <view wx:if="{{index%2!==0}}" class="treeHole-image image-right">
+          <image class="bgc-image bgc-image-right" src="../../assets/images/bgc_{{item.urlIndex}}.jpg" mode="aspectFill" />
+        </view>
+        <view class="treeHole-left">
+          <view class="treeHole-title">
+            <text class="title-date">{{item.date}}</text>
+            <text class="title-time">{{item.week}}</text>
+          </view>
+          <view class="weui-cell__bd"> {{item.title}}</view>
+        </view>
+        <view wx:if="{{index%2===0}}" class="treeHole-image image-left">
+          <image class="bgc-image bgc-image-left" src="../../assets/images/bgc_{{item.urlIndex}}.jpg" mode="aspectFill" />
+        </view>
+      </block>
+
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty-container">
+      <!-- <canvas id="c1" type="2d" style="display: inline-block; width: 300px; height: 300px;"></canvas> -->
+      <image class="empty-image" src="../../assets/images/empty.png" mode="aspectFit" />
+      <text class="empty-text">暂无内容</text>
+    </view>
+  </block>
+  <view class="btns" catchtap="handleAdd">
+    <view class="add-btn"></view>
+    <image class="add-image" src="../../assets/images/add.png" mode="aspectFill" />
+  </view>
+
+</view>

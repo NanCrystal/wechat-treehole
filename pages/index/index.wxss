@@ -1,0 +1,44 @@
+/* pages/welcome.wxss */
+.welcome-page {
+  height: 100vh;
+  background-color: #f3f6fa;
+}
+
+.welcome-container {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-item {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width:300rpx;
+  height:300rpx;
+}
+ 
+
+.welcome-text {
+ font-size: 32rpx;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #B0D5FC;
+  /* width: 200px;
+  margin: 0 auto; */
+  text-align: center;
+}
+
+.welcome-image {
+  width: 200px;
+  opacity: 0.1;
+}
+
+ 
